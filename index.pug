@@ -1,0 +1,7 @@
+extends /layouts/main
+
+block main
+    for action of component.menu
+      if action.path
+        form.container.pb-2(action=apibaseurl+action.path, method="POST")
+          button.btn.btn-primary(type="submit")= action.text
