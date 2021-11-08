@@ -26,8 +26,7 @@ let server = webfocusApp.start();
 settings.setIcon('path/to/favicon.ico');
 settings.setTitle(webfocusApp.configuration.name);
 settings.addAction("Open Application", () => open(`http://localhost:${server.address().port}/`));
-settings.addAction("Close Applicarion", () => process.exit(0));
-settings.showTray();
+settings.addAction("Close Tray", () => settings.closeTray());
 ```
 
 Its calls transport.sendMail with the message argument. (See [nodemailer message](https://nodemailer.com/message/)
